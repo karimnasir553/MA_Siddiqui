@@ -3,8 +3,7 @@
 **Author:** Abdul Karim Nasir Siddiqui  
 **Institution:** Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)  
 **Institute:** Institute of Autonomous Systems and Mechatronics (ASM)  
-**Supervisor:** Prof. Dr.-Ing. habil. Philipp Beckerle  
-**Period:** May – October 2025
+
 
 ---
 
