@@ -1,0 +1,45 @@
+{
+  "name": "SHAP Thesis Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [8888],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-toolsai.jupyter",
+        "james-yu.latex-workshop",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "ms-iot.vscode-ros",
+        "gruntfuggly.todo-tree",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "latex-workshop.latex.outDir": "%DIR%/output",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk (xelatex)",
+            "tools": ["latexmk-xelatex"]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk-xelatex",
+            "command": "latexmk",
+            "args": ["-xelatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+          }
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}

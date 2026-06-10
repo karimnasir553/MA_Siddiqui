@@ -1,0 +1,44 @@
+# Data — never commit raw or processed data
+data/raw/
+data/processed/
+
+# Compiled thesis PDF
+thesis/output/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment / secrets
+.env
+.env.*
+*.env
+
+# Model checkpoints
+*.pt
+*.pth
+checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Results — regeneratable
+results/figures/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/settings.json
+
+# Node (just in case)
+node_modules/
