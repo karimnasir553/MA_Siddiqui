@@ -66,11 +66,11 @@ Progress is tracked across five milestones:
 
 | Milestone | Target Date | Scope |
 |-----------|-------------|-------|
-| 1 — Literature Review & Setup | ~1 July 2025 | Background reading, repo set up, SQL pipeline running |
-| 2 — SQL Pipeline & Benchmark | ~22 July 2025 | SQL data processed, LSTM trained, KernelSHAP baseline done |
-| 3 — All Robot Data Collected | ~19 August 2025 | ROS2 data collected for all three failure scenarios |
-| 4 — Full SHAP Analysis | ~16 September 2025 | TimeSHAP + WinIT complete, all comparison figures generated |
-| 5 — Thesis Submitted | ~21 October 2025 | Final PDF submitted |
+| 1 — Literature Review & Setup | ~1 July 2026 | Background reading, repo set up, SQL pipeline running |
+| 2 — SQL Pipeline & Benchmark | ~1 August 2026 | SQL data processed, LSTM trained, KernelSHAP baseline done |
+| 3 — All Robot Data Collected | ~1 September 2026 | ROS2 data collected for all three failure scenarios |
+| 4 — Full SHAP Analysis | ~1 October 2026 | TimeSHAP + WinIT complete, all comparison figures generated |
+| 5 — Thesis Submitted | ~1 December 2026 | Final PDF submitted |
 
 ---
 
