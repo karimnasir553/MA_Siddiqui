@@ -17,6 +17,37 @@ CMAPSS_COLUMNS = [
 # Sensors with near-zero variance across all operating conditions (commonly dropped)
 CONSTANT_SENSORS = ["sensor_1", "sensor_5", "sensor_10", "sensor_16", "sensor_18", "sensor_19"]
 
+# Physical names from the NASA CMAPSS readme (Saxena & Goebel, 2008)
+SENSOR_PHYSICAL_NAMES = {
+    "sensor_1":  "T2   — Total temperature at fan inlet          [°R]  *constant*",
+    "sensor_2":  "T24  — Total temperature at LPC outlet         [°R]",
+    "sensor_3":  "T30  — Total temperature at HPC outlet         [°R]",
+    "sensor_4":  "T50  — Total temperature at LPT outlet         [°R]",
+    "sensor_5":  "P2   — Pressure at fan inlet                   [psia] *constant*",
+    "sensor_6":  "P15  — Total pressure in bypass-duct           [psia]",
+    "sensor_7":  "P30  — Total pressure at HPC outlet            [psia]",
+    "sensor_8":  "Nf   — Physical fan speed                      [rpm]",
+    "sensor_9":  "Nc   — Physical core speed                     [rpm]",
+    "sensor_10": "epr  — Engine pressure ratio                   [-]   *constant*",
+    "sensor_11": "Ps30 — Static pressure at HPC outlet           [psia]",
+    "sensor_12": "phi  — Ratio of fuel flow to Ps30              [pps/psi]",
+    "sensor_13": "NRf  — Corrected fan speed                     [rpm]",
+    "sensor_14": "NRc  — Corrected core speed                    [rpm]",
+    "sensor_15": "BPR  — Bypass ratio                            [-]",
+    "sensor_16": "farB — Burner fuel-air ratio                   [-]   *constant*",
+    "sensor_17": "htBleed — Bleed enthalpy                       [-]",
+    "sensor_18": "Nf_dmd — Demanded fan speed                    [rpm]  *constant*",
+    "sensor_19": "PCNfR_dmd — Demanded corrected fan speed       [rpm]  *constant*",
+    "sensor_20": "W31  — HPT coolant bleed                       [lbm/s]",
+    "sensor_21": "W32  — LPT coolant bleed                       [lbm/s]",
+}
+
+def sensor_label(sensor_col: str) -> str:
+    """Return a short readable label for a sensor column name."""
+    entry = SENSOR_PHYSICAL_NAMES.get(sensor_col, sensor_col)
+    # return just the abbreviation e.g. 'T30', 'Ps30'
+    return entry.split("—")[0].strip().split()[-1] if "—" in entry else sensor_col
+
 
 class CMAPSSLoader:
     """Loads and prepares the NASA CMAPSS FD00{1-4} datasets."""

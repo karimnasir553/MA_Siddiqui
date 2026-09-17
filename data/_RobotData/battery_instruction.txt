@@ -1,0 +1,1 @@
+The battery works normally if the voltage lies between 15v +-1 area, the capacity is larger than 90%, the temperature is lower than 36 degree.
